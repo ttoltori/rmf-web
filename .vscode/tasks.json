@@ -1,0 +1,14 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "sourceRosEnv",
+            "type": "shell",
+            "command": "source ~/rmf_ws/install/setup.bash && printenv > ${workspaceFolder}/.vscode/.ros.env",
+            "presentation": {
+                "reveal": "silent",
+                "panel": "shared"
+            }
+        }
+    ]
+}

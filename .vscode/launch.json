@@ -1,0 +1,40 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug RMF API Server (SQLite)",
+            "type": "python",
+            "request": "launch",
+            "module": "api_server",
+            "cwd": "${workspaceFolder}/packages/api-server",
+            "env": {
+                "RMF_API_SERVER_CONFIG": "sqlite_local_config.py",
+                "PYTHONPATH": "/home/ttoltori/rmf_ws/install/rmf_internal_msgs/lib/python3.12/site-packages:${env:PYTHONPATH}"
+            },
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "preLaunchTask": "sourceRosEnv",
+            "envFile": "${workspaceFolder}/.vscode/.ros.env"
+        },
+        {
+            "name": "Debug RMF API Server (PostgreSQL)",
+            "type": "python",
+            "request": "launch",
+            "module": "api_server",
+            "cwd": "${workspaceFolder}/packages/api-server",
+            "env": {
+                "RMF_API_SERVER_CONFIG": "psql_local_config.py",
+                "PYTHONPATH": "/home/ttoltori/rmf_ws/install/rmf_internal_msgs/lib/python3.12/site-packages:${env:PYTHONPATH}"
+            },
+            "python": "${workspaceFolder}/.venv/bin/python",
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ],
+    "settings": {
+        "python.analysis.extraPaths": [
+            "/home/ttoltori/rmf_ws/install/rmf_internal_msgs/lib/python3.12/site-packages"
+        ]
+    }
+}
